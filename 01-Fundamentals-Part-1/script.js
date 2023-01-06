@@ -469,3 +469,270 @@ console.log(typeof ("10" - "4" - "3" - 2 + "00")); // 100
 console.log(typeof ("10" - "4" - "3" - 2 + "00")); // string
 
 */
+
+//----------------------------------------------------------
+// LECTURE - 21: TRUTHY And FALSY VALUES
+//----------------------------------------------------------
+
+/*
+
+// ⭕ FALSY VALUES - They are the values that are not exactly false,
+// but will become false when we try to convert them into a Boolean. And in JavaScript,
+// there are only 5 falsy values. EVERYTHING ELSE are the TRUTHY values.
+
+//---------------
+// 🔴 Falsy Values:   0,  '',  undefined,  null,  NaN
+//---------------
+
+console.log(Boolean(0)); // false
+console.log(Boolean("")); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean(null)); // false
+console.log(Boolean(NaN)); // false
+
+//------------------
+// 🟢 Truthy Values
+//------------------
+
+console.log(Boolean({})); // true
+console.log(Boolean("Peter")); // true
+
+//---------------------------------------------------------------------------
+// ❓ Question - When exactly does JavaScript does Type Coercion to Booleans?
+//---------------------------------------------------------------------------
+
+// ✅ Answer - It happens in 2 Scenarios.
+// -----> First, when using logical Operators, and
+// -----> Second in a Logical Context, like for example in the condition of an if/else statement.
+
+//----------
+// EXAMPLE
+//---------
+
+//--------
+// ❗ FALSY
+//-------
+let money = 0; // <----- Evaluates to FALSE, Hence FALSY
+if (money) {
+  console.log("Don't spend it all");
+} else {
+  console.log("You should earn some money!"); // You should earn some money!
+}
+
+//---------
+// ✔ TRUTHY
+//--------
+money = 100; // <----- Evaluates to TRUE, Hence TRUTHY
+if (money) {
+  console.log("Don't spend it all"); // Don't spend it all
+} else {
+  console.log("You should get a job");
+}
+
+//-----------
+// BUG : Height is "0", which is defined, but its evaluated as FALSY,
+// This can be solved by using LOGICAL OPERATORS
+//-----------
+
+let oldHeight = 0;
+
+if (oldHeight) {
+  console.log("YAY! Height is defined");
+} else {
+  console.log("Height is UNDEFINED");
+}
+
+*/
+//----------------------------------------------------------
+// LECTURE - 22: EQUALITY OPERATORS: == VS ===
+//----------------------------------------------------------
+
+/*
+
+// ASSIGNMENT OPERATOR                              ---> =
+// LOOSE EQUALITY OPERATOR (Performs TYPE COERCION) ---> ==
+// STRICT OPERATOR (NO TYPE COERCION)               ---> ===
+
+const number = 18; // Assignment
+console.log("18" == 18); // true
+console.log("18" === 18); // false
+
+const age = "18";
+
+if (age === 18) console.log("You can drive (STRICT ===)");
+if (age == 18) console.log("You can drive (LOOSE ==)");
+
+// EXAMPLE
+
+//--------------------------
+// 🔴 PROMPT Function - This is a pretty simple
+// function of getting a value from a WebPage. This is the prompt function
+
+const favNum = Number(prompt("Enter a number: "));
+
+if (favNum === 33) {
+  console.log("33 is a nice number");
+} else if (favNum === 7) {
+  console.log("7 is also a nice number");
+} else if (favNum === 9) {
+  console.log("9 is also a nice number");
+} else {
+  console.log("Number is neither 33 or 7 or 9");
+}
+
+if (favNum !== 33) console.log("Why not 33?");
+
+
+*/
+
+//----------------------------------------------------------
+// LECTURE - 23: BASIC BOOLEAN LOGIC: AND, OR & NOT
+//----------------------------------------------------------
+
+// BOOLEAN LOGIC - It is branch of computer science which uses True and False values to solve complex logical problems. It uses several logical operators to combine True and False values, similar to the arithmetic operators that we use to combine numeric values.
+
+// For example - AND, OR & NOT Operators.
+
+// 💡 - REFER TO THE NOTES PDF OF THE COURSE TO SEE THE TRUTH TABLE
+
+/*
+
+--------------------
+---- AND Table --- 🔴
+--------------------
+--------------------
+AND   | True   False
+--------------------     
+True  | True  | False
+------
+False | False | False
+
+
+--------------------
+---- OR Table --- 🔴
+--------------------
+--------------------
+OR    | True   False
+--------------------     
+True  | True  | True
+------
+False | True | False
+
+
+--------------------
+---- NOT Table --- 🔴
+--------------------
+
+-- NOT True === False
+-- NOT False === True
+
+*/
+
+//----------------------------------------------------------
+// LECTURE - 24: LOGICAL OPERATORS
+//----------------------------------------------------------
+
+/*
+
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+const ofFullAge = true; // C
+
+console.log(hasDriversLicense && hasGoodVision); // true
+console.log(hasDriversLicense || hasGoodVision); // true
+
+console.log(hasGoodVision && !ofFullAge); // false
+console.log(hasGoodVision || !ofFullAge); // true
+
+//-----------------------------------
+if (hasDriversLicense && hasGoodVision) {
+  console.log("Carrie can drive"); // Carrie can drive
+} else {
+  console.log("Someone else should drive..");
+}
+
+//--------------------------------------
+if (hasDriversLicense && hasGoodVision && ofFullAge) {
+  console.log("Morty can drive..."); // Morty can drive...
+} else {
+  console.log("Morty should not drive......");
+}
+
+//--------------------------------------
+if (hasDriversLicense && hasGoodVision && !ofFullAge) {
+  console.log("Morty can drive...");
+} else {
+  console.log("Morty should not drive......"); // Morty should not drive......
+}
+
+//--------------------------------------
+if (hasDriversLicense || hasGoodVision || !ofFullAge) {
+  console.log("Morty can drive..."); // Morty can drive...
+} else {
+  console.log("Morty should not drive......");
+}
+
+*/
+
+//----------------------------------------------------------
+// LECTURE - 25: CODING CHALLENGE # 3
+//----------------------------------------------------------
+
+/*
+There are two gymnastics teams, Dolphins and Koalas. They compete against each
+other 3 times. The winner with the highest average score wins a trophy!
+Your tasks:
+
+1. Calculate the average score for each team, using the test data below
+
+2. Compare the team's average scores to determine the winner of the competition,
+and print it to the console. Don't forget that there can be a draw, so test for that
+as well (draw means they have the same average score)
+
+3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+team only wins if it has a higher score than the other team, and the same time a
+score of at least 100 points. 
+
+Hint: Use a logical operator to test for minimum
+score, as well as multiple else-if blocks 😉
+
+4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+both teams have the same score and both have a score greater or equal 100
+points. Otherwise, no team wins the trophy
+
+Test data:
+
+§ Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+
+§ Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+§ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+GOOD LUCK
+
+
+
+// const avgDolphins = (96 + 108 + 89) / 3;
+// const avgKoalas = (88 + 91 + 110) / 3;
+
+// const avgDolphins = (97 + 112 + 101) / 3;
+// const avgKoalas = (109 + 95 + 123) / 3;
+
+const avgDolphins = (97 + 112 + 101) / 3;
+const avgKoalas = (109 + 95 + 106) / 3;
+
+console.log(`Dolphins Average ${avgDolphins}, Koalas Average ${avgKoalas}`);
+
+if (avgDolphins > avgKoalas && avgDolphins >= 100) {
+  console.log(`Dolphins wins 🏆 with an average of ${avgDolphins}`);
+} else if (avgDolphins < avgKoalas && avgKoalas >= 100) {
+  console.log(`Koalas wins 🏆 with an average of ${avgKoalas}`);
+} else if (
+  avgDolphins === avgKoalas &&
+  avgDolphins >= 100 &&
+  avgKoalas >= 100
+) {
+  console.log("Both Wins the trophy 🏆");
+} else {
+  console.log("Its a draw");
+}
+
+*/

@@ -736,3 +736,158 @@ if (avgDolphins > avgKoalas && avgDolphins >= 100) {
 }
 
 */
+
+//----------------------------------------------------------
+// LECTURE - 26: THE SWITCH STATEMENT
+//----------------------------------------------------------
+
+// const day = prompt("Enter a day: ");
+
+const day = "saturday";
+
+switch (day) {
+  case "monday": // day === "monday" : SCRICT COMPARISON
+    console.log("Plan course structure");
+    console.log("Goto coding meetup");
+    break;
+  case "tuesday":
+    console.log("Plan theory videos");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Write code examples");
+    break;
+  case "friday":
+    console.log("Record videos");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the weekend :D");
+    break;
+  default:
+    console.log("Not a valid day!");
+}
+
+// Using if/else
+
+if (day === "monday") {
+  console.log("Plan course structure");
+  console.log("Goto coding meetup");
+} else if (day === "tuesday") {
+  console.log("Plan theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Write code examples");
+} else if (day === "friday") {
+  console.log("Record videos");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the weekend");
+} else {
+  console.log("Not a valid");
+}
+
+//----------------------------------------------------------
+// LECTURE - 27: STATEMENTS AND EXPRESSIONS
+//----------------------------------------------------------
+
+//------------------
+// ⭕ Expression - It is a piece of cade that produces A value.
+//-----------------
+
+console.log(3 + 4);
+console.log(1991);
+console.log(true && false && !false);
+
+//------------------------
+// ⭕ Statement -
+//------------------------
+// It is a long piece of
+// code that is excuted but does not produce a value on its own.
+// They are like full sentences. For Example - if/else statement
+
+if (24 > 12) {
+  const str = "24 is bigger";
+}
+
+const personName = "Peter";
+console.log(`${personName} is ${2077 - 1991} years old`);
+
+//----------------------------------------------------------
+// LECTURE - 28: THE CONDITIONAL (TERNARY) OPERATOR
+//----------------------------------------------------------
+
+//...................................
+// ✅ It is called the TERNARY Operator,
+// as it has 3 Parts. The
+// CONDITION ?  "IF" :  "ELSE"
+//...................................
+const age = 15;
+
+const drink = age >= 18 ? "Whiskey 🥃" : "Water 💧";
+console.log(drink);
+
+//----------------------
+let drink2;
+if (age >= 18) {
+  drink2 = "Whiskey 🥃";
+} else {
+  drink2 = "Water 💧";
+}
+
+console.log(drink2);
+
+//---------------------
+console.log(`I like to drink ${age > 18 ? "Whiskey 🥃" : "Water 💧"}`);
+
+//----------------------------------------------------------
+// LECTURE - 29: CODING CHALLENGE # 4
+//----------------------------------------------------------
+/*
+
+Steven wants to build a very simple tip calculator for whenever he goes eating in a
+restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and
+300. If the value is different, the tip is 20%.
+Your tasks:
+
+1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for
+this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can
+start with an if/else statement, and then try to convert it to a ternary
+operator!)
+
+2. Print a string to the console containing the bill value, the tip, and the final value
+(bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
+316.25”
+
+Test data:
+
+§ Data 1: Test for bill values 275, 40 and 430
+
+Hints:
+
+§ To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+§ Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+GOOD LUCK
+
+*/
+
+const billAmount = 430;
+
+const tipAmount =
+  billAmount >= 50 && billAmount <= 300 ? 0.15 * billAmount : 0.2 * billAmount;
+
+console.log(
+  `The bill is ${billAmount} and the tip is ${tipAmount} and the total is ${
+    billAmount + tipAmount
+  }`
+);
+
+//----------------------------------------------------------
+// LECTURE - 30: JAVASCRIPT RELEASES: ES5, ES6+ AND ESNEXT
+//----------------------------------------------------------
+
+// REFER LECTURE SLIDES
+
+// ES1
+// 1997
+
+// ES6    ES7   ES8    ES9   ES10  ES11  ES12  ES13  ES14
+// 2015  2016   2017   2018  2019  2020  2021  2022  2023

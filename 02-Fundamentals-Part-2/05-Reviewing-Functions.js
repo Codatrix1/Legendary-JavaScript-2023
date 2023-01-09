@@ -49,3 +49,5 @@ const calcAge4 = (birthYear) => {
   // EXPLICIT Return
   return 2037 - birthYear;
 };
+
+// Three different ways of writing functions, but they all work in a similar way, receive INPUT Data, TRANSFORM Data, and then OUTPUT Data.

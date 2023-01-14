@@ -1,6 +1,6 @@
 "use strict";
 //-------------------------------------------------------
-// LECTURE 74: IMPLEMENTING GAME LOGIC
+// LECTURE 75: MANIPULATING CSS STYLES
 //-------------------------------------------------------
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
@@ -20,6 +20,8 @@ document.querySelector(".check").addEventListener("click", function () {
     // When guess is correct
   } else if (guess === secretNumber) {
     document.querySelector(".message").textContent = "🏆 Correct Number";
+    document.querySelector("body").style.backgroundColor = "#37b24d";
+    document.querySelector(".number").style.width = "30rem";
 
     // When guess too high
   } else if (guess > secretNumber) {

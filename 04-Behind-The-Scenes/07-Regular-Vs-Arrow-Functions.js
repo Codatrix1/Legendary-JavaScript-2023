@@ -35,7 +35,7 @@ const carrieDetails = {
   birthYear: 1980,
 
   calcAge: function () {
-    console.log(this); // "peterDetails" Object
+    console.log(this); // "carrieDetails" Object
     console.log(2037 - this.birthYear);
 
     const millenial = function () {
@@ -62,7 +62,7 @@ const carrieDetailsSolOne = {
   birthYear: 1980,
 
   calcAge: function () {
-    console.log(this); // "peterDetails" Object
+    console.log(this); // "carrieDetailsSolOne" Object
     console.log(2037 - this.birthYear);
 
     // Solution - 1
@@ -93,7 +93,7 @@ const carrieDetailsSolTwo = {
   birthYear: 1980,
 
   calcAge: function () {
-    console.log(this); // "peterDetails" Object
+    console.log(this); // "carrieDetailsSolTwo" Object
     console.log(2037 - this.birthYear);
 
     // Solution - 2

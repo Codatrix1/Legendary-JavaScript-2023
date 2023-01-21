@@ -3,7 +3,24 @@
 //-----------------------------------------------
 // LECTURE 108: NULLISH COALESCING Operator (??)
 //------------------------------------------------
+/*
+                                 .............................
+                                  🟢 Introduced in ES2020 🟢
+                                 .............................
 
+
+?? - Nullish Coalescing Values are -----------------> 1.)null
+                                                      2.)undefined variable
+
+
+
+              ⭕ Note:   0 and ""(Empty String) -------------> Truthy Values
+
+
+
+// ?? - Nullish Coalescing  - Since ES2020 - Works with the concept of Nullish values, instead of FALSY Values.. Thus, including 0 and undefined variable... 0 and "" are Truthy Values.. Only Nullish VAlues will Short-Circuit The evaluation here              
+
+*/
 //.....................................
 // 🔴 OUR DATA
 //.....................................

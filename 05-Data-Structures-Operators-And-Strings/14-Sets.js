@@ -127,3 +127,5 @@ console.log(new Set(["Waiter", "Chef", "Manager", "Chef", "Waiter"]).size); // 3
 
 // Other Example
 console.log(new Set("peterquinn")); // Set(8) {'p', 'e', 't', 'r', 'q', 'u', 'i', 'n'}
+
+// 🔴 Important Note: Sets are not intended to replace Arrays at all. Whenever we need to store data, which contains duplicates, always use ARRAYS. The arrays also have an access to a lot of ARRAY Methods. which allows us to Manipulate Data, that we have to study later. Sets are only useful, when we need to work with UNIQUE data. So, we should focus more on Array and Array Methods.

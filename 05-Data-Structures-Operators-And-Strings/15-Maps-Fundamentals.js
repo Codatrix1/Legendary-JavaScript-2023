@@ -109,6 +109,6 @@ console.log(orangeMap.get(arrayAsKey)); // Hello
 //-----------------------------------
 // setting a DOM element as the key
 //------------------------------------
-orangeMap.set(document.querySelector("h1"), "Heading of the DOM");
+// orangeMap.set(document.querySelector("h1"), "Heading of the DOM");
 
-console.log(orangeMap); // Map(2) {Array(3) => 'Hello', h1 => 'Heading of the DOM'}
+// console.log(orangeMap); // Map(2) {Array(3) => 'Hello', h1 => 'Heading of the DOM'}
